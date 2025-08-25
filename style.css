@@ -1,0 +1,17 @@
+
+
+body{
+    background-color: #deab3d;
+}
+
+
+
+ .texto{
+    width:80%;
+    height:100%;
+    display:center;
+    background-color: rgb(22, 138, 51);
+    border: solid;
+    padding: 15px;
+    margin: 20px;
+}
