@@ -1,9 +1,21 @@
 
 
 body{
-    background-color: #deab3d;
+  /*  background-color: #deab3d;*/
+   background: linear-gradient(90deg, #fff, #ffde59, #fff);
 }
 
+.cabecalho{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding: 20px;
+    border:solid;
+}
+
+.sobre-mim p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 
  .texto{
@@ -14,4 +26,61 @@ body{
     border: solid;
     padding: 15px;
     margin: 20px;
+}
+.foto1{
+    width:130px;
+    height:160px;
+   
+}
+
+.foto{
+    width:200px;
+    height:160px;
+
+}
+.cards {
+  display: flex;        /* coloca as cards lado a lado */
+  gap: 20px;            /* espaço entre as cards */
+  flex-wrap: wrap;      /* se não couber, quebra linha */
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* mantém proporção da imagem */
+  transition: transform 0.5s;
+}
+.card .overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;       /* aumenta o espaço interno para não escapar */
+  box-sizing: border-box; /* garante que padding não aumente o tamanho total */
+  transition: top 0.5s;
+  backdrop-filter: blur(3px);
+  overflow-wrap: break-word; /* força quebra de palavras grandes */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* efeito leve de zoom */
+}
+
+.card:hover .overlay {
+  top: 0; /* overlay aparece sobre a imagem */
 }
